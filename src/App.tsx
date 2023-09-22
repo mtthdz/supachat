@@ -3,18 +3,14 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import ChatMessage from './components/elements/ChatMessage';
 import Layout from './components/sections/Layout';
 import ChatTimestamp from './components/containers/ChatTimestamp';
+import { chatData } from './api/chatData';
 
 function App(): JSX.Element {
-  const data = [
-    {message: 'hello'},
-    {message: 'my name is matt'},
-    {message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}
-  ]
+  let data = chatData;
 
   return (
     <SafeAreaView>
       <Layout>
-        <Text>chat</Text>
         <View style={styles.view}>
           {data.map((item, index) => {
             return <ChatMessage body={item.message} key={index}/>
