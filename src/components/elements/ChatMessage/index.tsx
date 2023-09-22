@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 import SMessage from './Message.styles';
 
 interface props {
@@ -9,9 +9,14 @@ interface props {
 
 const ChatMessage = ({ body, sent }: props) => {
   return (
-    <View style={SMessage.view}>
+    <TouchableOpacity
+      style={SMessage.view}
+      onLongPress={() => {
+        console.log('test');
+      }}
+    >
       <Text style={SMessage.text}>{body}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
