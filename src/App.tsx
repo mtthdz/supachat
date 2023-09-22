@@ -2,6 +2,7 @@ import React from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import ChatMessage from './components/elements/ChatMessage';
 import Layout from './components/sections/Layout';
+import ChatTimestamp from './components/containers/ChatTimestamp';
 
 function App(): JSX.Element {
   const data = [
@@ -18,6 +19,7 @@ function App(): JSX.Element {
           {data.map((item, index) => {
             return <ChatMessage body={item.message} key={index}/>
           })}
+          <ChatTimestamp />
         </View>
       </Layout>
     </SafeAreaView>
