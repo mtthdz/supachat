@@ -5,9 +5,10 @@ import SMessage from './Message.styles';
 interface props {
   body: String,
   sent?: boolean,
+  user?: boolean,
 }
 
-const ChatMessage = ({ body, sent }: props) => {
+const ChatMessage = ({ body, sent, user }: props) => {
   return (
     <TouchableOpacity
       style={SMessage.view}
