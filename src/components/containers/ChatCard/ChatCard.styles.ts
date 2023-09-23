@@ -1,6 +1,10 @@
 import { StyleSheet } from "react-native";
 
 const SChatCard = StyleSheet.create({
+  button: {
+    borderBottomWidth: 1,
+    borderBottomColor: 'lightgrey',
+  },
   container: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
@@ -8,8 +12,6 @@ const SChatCard = StyleSheet.create({
     flexWrap: 'nowrap',
     width: '100%',
     paddingVertical: 6,
-    borderBottomWidth: 1,
-    borderBottomColor: 'lightgrey',
   },
   avatar: {
     height: 40,
