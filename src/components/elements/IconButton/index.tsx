@@ -12,7 +12,7 @@ interface props {
 const IconButton = ({onPress, icon}: props) => {
   return (
     <TouchableOpacity style={SIconButton.view} onPress={onPress}>
-        <FontAwesomeIcon style={SIconButton.icon} icon={icon} />
+        <FontAwesomeIcon style={SIconButton.icon} icon={icon} size={12} />
     </TouchableOpacity>
   )
 }

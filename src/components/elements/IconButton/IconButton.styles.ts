@@ -13,6 +13,7 @@ const SIconButton = StyleSheet.create({
   },
   icon: {
     color: '#ffffff',
+    fontSize: 10,
   }
 });
 
