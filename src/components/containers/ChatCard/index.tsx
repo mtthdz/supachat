@@ -1,6 +1,13 @@
 import { Text, TouchableOpacity, View } from "react-native"
 import SChatCard from "./ChatCard.styles";
 
+/**
+ * TODO: make avatar standalone component with variants
+ * TODO: make dynamic
+ * TODO: add routing functionality
+ * 
+ * @returns JSX
+ */
 const ChatCard = () => {
   return (
     <TouchableOpacity style={SChatCard.container}>
