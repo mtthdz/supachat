@@ -1,8 +1,8 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useState } from "react";
-import Login from "../components/screens/Login";
-import ChatMain from "../components/screens/ChatMain";
+import Login from "../screens/Login";
+import ChatNav from "./ChatNav";
 
 const Stack = createNativeStackNavigator();
 
@@ -13,7 +13,7 @@ const RootNav = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         { login ? (
-          <Stack.Screen name='main' component={ChatMain}/>
+          <Stack.Screen name='main' component={ChatNav}/>
         ) : (
           <Stack.Screen name='login' component={Login}/>
         )}
