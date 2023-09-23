@@ -1,6 +1,7 @@
 import { Text, TextInput, TouchableOpacity, View } from "react-native"
 import SChatForm from "./ChatForm.styles";
 import IconButton from "../../elements/IconButton";
+import Layout from "../Layout";
 
 const ChatForm = () => {
   const onChangeText = () => {
@@ -13,12 +14,17 @@ const ChatForm = () => {
 
   return (
     <View style={SChatForm.container}>
-      <TextInput
-        style={SChatForm.input}
-        onChangeText={onChangeText}
-        placeholder={'Message...'}
-      />
-      <IconButton icon={'arrow-up'} onPress={submit} />
+      <Layout>
+        <View style={SChatForm.flexParent}>
+          <TextInput
+            style={SChatForm.input}
+            onChangeText={onChangeText}
+            placeholder={'Message...'}
+            multiline={true}
+          />
+          <IconButton icon={'arrow-up'} onPress={submit} />
+        </View>
+      </Layout>
     </View>
   );
 };

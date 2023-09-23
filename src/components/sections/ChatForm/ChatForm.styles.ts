@@ -2,11 +2,12 @@ import { StyleSheet } from "react-native";
 
 const SChatForm = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    flexWrap: 'nowrap',
     width: '100%',
     paddingVertical: 5,
-    // backgroundColor: 'red',
+  },
+  flexParent: {
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
   },
   input: {
     flex: 1,
