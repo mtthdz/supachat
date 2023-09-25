@@ -1,4 +1,4 @@
-import { Text, TextInput, TouchableOpacity, View } from "react-native"
+import { TextInput, View } from "react-native"
 import SChatForm from "./ChatForm.styles";
 import IconButton from "../../elements/IconButton";
 import Layout from "../Layout";
