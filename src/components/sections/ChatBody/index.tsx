@@ -3,14 +3,12 @@ import { Keyboard, ScrollView } from "react-native"
 import ChatMessage from "../../elements/ChatMessage"
 import SChatBody from "./ChatBody.styles";
 import Layout from "../Layout";
-import { chatData } from "../../../api/chatData";
 import ChatTimestamp from "../../containers/ChatTimestamp";
 
 /**
  * @returns JSX
  */
 const ChatBody = () => {
-  const data = chatData;
 
   /**
    * Keyboard scroll functionality
@@ -36,13 +34,6 @@ const ChatBody = () => {
         onContentSizeChange={() => {scrollViewRef.current?.scrollToEnd()}}
       >
         <Layout>
-          {
-            data.map((input, index) => {
-              return (
-                <ChatMessage body={input.message} key={index} />
-              );
-            })
-          }
           <ChatTimestamp />
         </Layout>
       </ScrollView>
