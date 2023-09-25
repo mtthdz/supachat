@@ -1,5 +1,6 @@
 interface State {
   token: string;
+  id: string;
   username: string;
   loggedIn: boolean;
 }
@@ -12,8 +13,9 @@ interface Action {
 
 const initialState: State = {
   token: '',
-  username: '',
-  loggedIn: false,
+  id: 'eab49749-cdc7-4449-b78d-68ed55012ca6',
+  username: 'mtthdz',
+  loggedIn: true,
 };
 
 const authReducer = (state = initialState, action: Action) => {
