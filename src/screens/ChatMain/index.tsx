@@ -23,7 +23,7 @@ const ChatMain = () => {
           <KeyboardAvoidingView
             style={SChatMain.flexParent}
             behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-            keyboardVerticalOffset={94}
+            keyboardVerticalOffset={60}
           >
             <ChatBody />
             <ChatForm />
