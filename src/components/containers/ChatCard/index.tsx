@@ -6,11 +6,15 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 /**
  * TODO: make avatar standalone component with variants
- * TODO: make dynamic
+ * TODO: send props to cousin via chat reducer
  * 
  * @returns JSX
  */
-const ChatCard = () => {
+type props = {
+  name: string,
+  message: string,
+}
+const ChatCard = ({ name, message }: props) => {
   const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
 
   return (
@@ -19,8 +23,8 @@ const ChatCard = () => {
         <View style={SChatCard.container}>
           <View style={SChatCard.avatar}></View>
           <View style={SChatCard.content}>
-            <Text style={SChatCard.title}>name</Text>
-            <Text style={SChatCard.meta}>lorem ipsum dolor si...</Text>
+            <Text style={SChatCard.title}>{name ? name : 'user'}</Text>
+            <Text style={SChatCard.meta}>{message ? message : 'send a message'}</Text>
           </View>
         </View>
       </Layout>
